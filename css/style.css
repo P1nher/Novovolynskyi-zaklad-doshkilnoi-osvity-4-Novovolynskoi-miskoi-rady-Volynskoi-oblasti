@@ -1,0 +1,1109 @@
+/* ========== ЗМІННІ (CSS root) ========== */
+:root {
+  --primary-color: #2cb67d;
+  --secondary-color: #96f2d7;
+  --bg-color: #f4fdf8;
+  --text-color: #222;
+  --card-bg: #fff;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* ========== ОСНОВНІ СТИЛІ ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ========== HEADER (ШАПКА) ========== */
+header {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+header nav a:hover {
+  color: var(--primary-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  background: linear-gradient(135deg, #e3fcec, #c4f0e0);
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-img {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #24a46d;
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* ========== CARDS ========== */
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+  border: 5px solid var(--primary-color);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ========== INFO SECTION ========== */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+/* ========== STAFF SECTION ========== */
+.staff-section {
+  padding: 3rem 1rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.staff-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.staff-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.staff-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+}
+
+.staff-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.staff-card .position {
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.staff-card p {
+  flex-grow: 1;
+  margin-bottom: 0;
+}
+
+.staff-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  align-self: center;
+  margin-top: 1rem;
+  width: fit-content;
+  min-width: 100px;
+}
+
+.staff-button:hover,
+.staff-button:focus {
+  background: #24a46d;
+  outline: none;
+}
+
+/* ========== GROUPS SECTION ========== */
+#groups {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#groups h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.group-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.group-card {
+  background-color: var(--card-bg);
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+}
+
+.group-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.group-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* ========== GALLERY SECTION ========== */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ========== CONTACTS SECTION ========== */
+#contacts {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.contact-title {
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #2a88d8;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #1e6fbf;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.map-card {
+  flex: 1;
+  min-width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== UTILITY CLASSES ========== */
+.text-center {
+  text-align: center;
+}
+
+.staff-card p {
+  flex-grow: 1; /* Опис займає весь простір між заголовком і кнопкою */
+  margin-bottom: 0;
+}
+
+.staff-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  align-self: center; /* Центрована по горизонталі */
+  margin-top: 1rem;
+  width: fit-content;
+  min-width: 100px;
+}
+
+.staff-button:hover,
+.staff-button:focus {
+  background: #24a46d;
+  outline: none;
+}
+
+/* ====== Groups Section ====== */
+
+#groups {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#groups h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.group-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.group-card {
+  background-color: var(--card-bg);
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+}
+
+.group-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.group-card h4 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* ====== Gallery Section ====== */
+
+#gallery {
+  text-align: center;
+  padding: 2rem;
+}
+
+#gallery h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== Contacts Section ====== */
+
+#contacts {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.contact-title {
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #2a88d8;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: #1e6fbf;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.map-card {
+  flex: 1;
+  min-width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Header & Nav ====== */
+
+.text-center {
+  text-align: center;
+}
+
+header strong {
+  font-size: 1.5rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-btn img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.phone-btn {
+  display: flex;
+  align-items: center;
+  background-color: #44B574;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  gap: 0.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.phone-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.phone-btn:hover {
+  background-color: #3ca168;
+}
+
+/* ====== Main Content Styles ====== */
+
+.teacher-profile,
+.group-profile {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-profile img,
+.group-profile img {
+  border: 4px solid #4CAF50;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.teacher-profile img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.group-profile img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.teacher-profile h1,
+.group-profile h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-profile h3 {
+  text-align: center;
+  color: #666;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.teacher-profile section,
+.group-profile section {
+  margin-top: 2rem;
+}
+
+.teacher-profile h2,
+.group-profile h2 {
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-profile ul,
+.group-profile ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+blockquote,
+.group-profile blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #4CAF50;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.group-profile p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* ====== Gallery ====== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* ====== Slider ====== */
+
+.slider-outer-container {
+  position: relative;
+  width: 1220px;
+  margin: 0 auto;
+  padding: 0 70px;
+  box-sizing: content-box;
+  user-select: none;
+}
+
+.slider-container,
+.slider-wrapper {
+  width: 1220px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slider-images img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.slider-images img:last-child {
+  margin-right: 0;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffffcc;
+  border: 2px solid #24a46d;
+  color: #24a46d;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: #24a46d;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.7);
+}
+
+button.prev {
+  left: 0;
+}
+
+button.next {
+  right: 0;
+}
+
+/* ====== Footer ====== */
+
+footer {
+  background-color: #222;
+  color: #f4f4f4;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 2rem;
+}
+
+/* ====== Misc Styles ====== */
+
+.card {
+  flex: 1 1 250px;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  color: #2a7ae2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.green-text {
+  color: #4CAF50;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* ====== Responsive Styles ====== */
+
+/* 1024px і менше */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .staff-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
+
+/* 768px і менше */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: static !important;
+    box-shadow: none;
+  }
+
+  header nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header nav a,
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  .group-grid,
+  .staff-row,
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .group-card,
+  .staff-card {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .slider-outer-container {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .slider-container {
+    overflow: visible;
+  }
+
+  .slider-wrapper {
+    display: block;
+  }
+
+  .slider-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: none !important;
+    transition: none;
+    gap: 1rem;
+  }
+
+  .slider-images img {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+
+  body {
+    padding-top: 0 !important;
+  }
+}
+
+/* 600px і менше */
+@media (max-width: 600px) {
+  .teacher-profile,
+  .group-profile {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .group-card {
+    padding: 1rem;
+  }
+
+  .gallery-grid img {
+    width: 90vw;
+    height: auto;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* 480px і менше */
+@media (max-width: 480px) {
+  .btn,
+  .staff-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+
+  .map-card {
+    height: 200px;
+    width: 100%;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Центрування заголовків */
+  section h2 {
+    text-align: center;
+  }
+
+  /* Центрування контейнера з фото */
+  .slider-outer-container,
+  .gallery-grid {
+    text-align: center;
+  }
+
+  .slider-images,
+  .gallery-grid {
+    display: inline-block; /* Щоб вміст центрувався */
+    text-align: center;
+  }
+
+  .slider-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transform: none !important;
+    transition: none;
+  }
+
+  .slider-images img,
+  .gallery-grid img {
+    display: block;
+    max-width: 100%;   /* НЕ обмежуємо розмір штучно */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  section#gallery,
+  .slider-outer-container,
+  .slider-wrapper,
+  .slider-images,
+  .gallery-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .slider-images img,
+  .gallery-grid img {
+    width: auto;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-images img,
+  .gallery-grid img {
+    width: 100%;       /* максимально на всю ширину контейнера */
+    max-width: 300px;  /* але не більше 300px */
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .slider-images {
+    display: flex !important;
+    flex-wrap: wrap !important;          /* дозволяємо переносити фото */
+    justify-content: center !important;  /* центруємо фото */
+    gap: 1rem !important;                 /* відстань між фото */
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .slider-images img {
+    width: 300px !important; /* або потрібний розмір */
+    height: auto !important;
+    object-fit: cover;
+    margin: 0 !important;
+    display: block;
+  }
+}

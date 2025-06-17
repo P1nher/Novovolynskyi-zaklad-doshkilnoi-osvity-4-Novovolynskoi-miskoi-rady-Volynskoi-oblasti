@@ -1107,3 +1107,21 @@ main {
     display: block;
   }
 }
+
+/* Медіа-запит для екранів шириною до 768px (планшети та мобільні пристрої) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  header, footer {
+    text-align: center;
+  }
+  nav ul {
+    display: block;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 5px 0;
+  }
+}

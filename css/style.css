@@ -1134,6 +1134,13 @@ main {
     max-width: 100%;
   }
 
+.map-card iframe {
+  display: block;
+  width: 100%;
+  height: 270px;
+  border: none;
+}
+
   img, video, iframe {
     max-width: 100%;
     height: auto;
